@@ -8,7 +8,7 @@ default_args = {
     'retries': 1,
 }
 
-with DAG('date_dag', default_args=default_args, schedule_interval='@daily') as dag:
+with DAG('date_dagsd', default_args=default_args, schedule_interval='@daily') as dag:
     t1 = BashOperator(
         task_id='print_date',
         bash_command='date',
